@@ -21,7 +21,7 @@ class DemoApplicationTests {
 
 	@Test
 	void verifyHelloMessage() throws Exception {
-		String patternString = "(Hello World! From host: ).*\\/\\d+.\\d+.\\d+.\\d+";
+		String patternString = "This isn't a hello world message From host: ).*\\/\\d+.\\d+.\\d+.\\d+";
 		Matcher<String> regexMatcher = Matchers.matchesRegex(patternString);
 
 		this.mockMvc.perform(get("/hello")).andExpect(status().isOk())

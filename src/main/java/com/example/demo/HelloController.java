@@ -11,7 +11,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        String message = "Hello World!";
+        String message = "This isn't a hello world message";
         try {
             InetAddress ip = InetAddress.getLocalHost();
             message += " From host: " + ip;
